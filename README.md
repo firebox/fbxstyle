@@ -3,6 +3,11 @@ Master cards &amp; style guides
 
 Welcome to the email design guideline for Firebox!
 
+Contents
+- Getting started
+- Styles used
+- Common card sample code (quick access)
+
 ###Getting started
 You can use a the <a href="https://github.com/firebox/fbxstyle/blob/master/master-template-blank.html">master-blank-template.html</a> to see every card that is available to you. Alternatively, you can view the quick cards section with the most popular ones create to copy and paste.
 
@@ -10,17 +15,14 @@ You can use a the <a href="https://github.com/firebox/fbxstyle/blob/master/maste
 Each card/section can be used independently from one another. There is not parent container or wrapper keeping it in one place.
 
 ###Want to use different cards?
-- Easy! You can download or pull the recent <a href="https://github.com/firebox/fbxstyle/blob/master/master-cards.html">master-cards.html</a> file from this repo. This will have the most up-to-date cards that you can use.
-
-
-Styles used
-Common cards (quick access)
+- Easy! You can download or pull the recent <a href="https://github.com/firebox/fbxstyle/blob/master/master-cards.html">master-cards.html</a> file from the repo. This will have the most up-to-date cards for your use.
 
 
 ###Hero card
 The main use for this card is to introduce a new or hero product.
 
-```<!-- HERO SECTION-->
+```
+<!-- HERO SECTION-->
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
         <td bgcolor="#F6F6F6" align="center" style="padding: 0px 15px 20px 15px;" class="section-padding">
@@ -79,5 +81,4 @@ The main use for this card is to introduce a new or hero product.
         </td>
     </tr>
 </table>
-<!-- END HERO SECTION-->
-```
+<!-- END HERO SECTION-->```

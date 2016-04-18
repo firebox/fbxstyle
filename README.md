@@ -3,22 +3,22 @@ Master cards &amp; style guides
 
 Welcome to the email design guideline for Firebox!
 
-Contents
+##Contents
 - Getting started
 - Styles used
 - Common card sample code (quick access)
 
 ###Getting started
-You can use a the <a href="https://github.com/firebox/fbxstyle/blob/master/master-template-blank.html">master-blank-template.html</a> to see every card that is available to you. Alternatively, you can view the quick cards section with the most popular ones create to copy and paste.
+If you are starting from scratch, use the <a href="https://github.com/firebox/fbxstyle/blob/master/master-template-blank.html">master-blank-template.html</a>. This has all of the styles, the logo and the footer. If you have an existing template and want to add extra cards that are not included in the builder, download or view the <a href="https://github.com/firebox/fbxstyle/blob/master/master-cards.html">master-cards.html</a> file.
 
 ###How to use the cards
-Each card/section can be used independently from one another. There is not parent container or wrapper keeping it in one place.
+Each card can be used independently from one another as there is no parent container or wrapper.
+To copy a card, start from the `<!-- [NAME] CARD-->` and copy until the `<!-- END [NAME] CARD-->`
 
-###Want to use different cards?
-- Easy! You can download or pull the recent <a href="https://github.com/firebox/fbxstyle/blob/master/master-cards.html">master-cards.html</a> file from the repo. This will have the most up-to-date cards for your use.
+##Quick cards
+See below for quick access to our most popular cards, simply copy and paste them into your template.
 
-
-###Hero card
+####Hero card
 The main use for this card is to introduce a new or hero product.
 
 ```
@@ -71,7 +71,6 @@ The main use for this card is to introduce a new or hero product.
 																	</tr>
 
 															</table>
-
 															</td>
 													</tr>
                         </table>
@@ -82,3 +81,88 @@ The main use for this card is to introduce a new or hero product.
     </tr>
 </table>
 <!-- END HERO SECTION-->```
+
+####Hero card
+The main use for this card is to introduce a new or hero product.
+
+
+```
+<!-- IMAGE CARD -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td bgcolor="#f6f6f6" align="center" style="padding: 0px 15px 0px 15px;" class="slice-padding">
+            <table border="0" cellpadding="0" cellspacing="0" width="600" class="responsive-table">
+                <tr>
+									<td align="center" bgcolor="#FFFFFF" valign="middle">
+											<a href="https://www.firebox.com/chart" target="_blank">
+													<img src="http://media.firebox.com/i/nl/nl1073/top102.jpg" width="600" style="display: block; width: 600px;" alt="Top 10 Products during March" title="Top 10 Products during March" border="0" class="img-max">
+											</a>
+									</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+```
+
+```
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td bgcolor="#F6F6F6" style="padding: 0px 15px 0px 15px;" class="smaller-padding">
+            <div align="center">
+                <table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper">
+                    <tr>
+                      <td background="https://i.imgur.com/YJOX1PC.png" bgcolor="#7bceeb" width="120" height="92" valign="top">
+                      <!--[if gte mso 9]>
+                      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:120px;height:92px;">
+                        <v:fill type="tile" src="https://i.imgur.com/YJOX1PC.png" color="#7bceeb" />
+                        <v:textbox inset="0,0,0,0">
+                      <![endif]-->
+                      <div>
+                        Hello guys
+                      </div>
+                      <!--[if gte mso 9]>
+                      </v:textbox>
+                      </v:rect>
+                      <![endif]-->
+                      </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+```
+
+
+##Email styles
+I have made some amendments to the colours of the emails due to the brightness not rendering well on older monitors
+
+Heading
+#343434
+
+Paragraph and sub copy
+#888888
+
+When adding text styles and fonts to an email you need a few parameters to get started.
+Code
+
+
+When I view a card on mobile it has a gap
+slice and section padding
+
+
+Buttons
+```
+<tr cellspacing="0" cellpadding="0">
+  <!--[if mso]>
+      <td style="text-align: center;" class="btn" width="250" height="37" align="center" bgcolor="#343434">
+  <![endif]-->
+  <!--[if !mso]><!-- -->
+    <td style="text-align: center;" class="btn" width="250" height="37" align="center">
+  <!--<![endif]-->
+       <a href="https://www.firebox.com/admin/customerreviews?itc=944&utm_source=email&utm_medium=welcome&utm_campaign=welcome_2" target="blank" style="font-family:'sofia', Helvetica, Arial, sans-serif; display: inline-block; padding: 10px 20px; border-radius: 2px; background-color: #343434 !important; font-weight: bold; color: #fff; line-height: 1; text-decoration: none; margin: 0; text-transform: uppercase;">
+         View more reviews</a>
+     </td>
+   </tr>
+```

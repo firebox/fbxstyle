@@ -25,7 +25,49 @@ You can style the cards pretty much any way you want. These are colourless and t
 In the master cards file, text should only be two colours - `#343434` for title text and `#888888` for body text. When setting the `font-color` you should always apply the style to the `<td>` e.g `<td style="font-color: #000000;">` if you are using the mast cards then the `font-color` should already be applied and simple to change.
 
 #### Changing background colour
-Changing the background colour of a card is super easy. You can change the background colour in two ways, either you want the entire card to be one colour or you want a background colour and a container colour. Look for the `bgcolor="#F6F6F6"`
+Changing the background colour of a card is super easy. You can change the background colour in two ways, either you want the entire card to be one colour or you want a background colour and a container colour. Look for the `bgcolor`. See the  example below:
+
+`<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td bgcolor="OUTSIDECOLOUR">
+            <div align="center" style="padding: 0px 20px 0px 20px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper">
+                    <tr>
+                        <td style="padding: 0px 0px 20px 0px;" class="logo">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td bgcolor="INSIDECOLOUR" width="600" align="center" class="header" style="font-weight: bold; font-family: 'Arial', sans-serif; color: #fff; padding-top: 25px; font-size: 42px; line-height: 1;">
+                                        Pebble Time Smartwatch and new products this week
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+`
+
+## Style rules
+For the cards please follow the rules set.
+
+#### The 20px rule
+In a nutshell the 20px rule is a guide to how much padding everything should have on the email. You will see that each card has a 20px padding inside the card, a 20px padding between cards and text groups have 20px padding in between them. When you add padding, always add `padding-bottom`, padding works downwards.
+
+#### When you can break the 20px rule
+The only time you can break the 20px rule is when you need to separate components further apart or you need to group text together. To group text together, you can use a 10px gap and if you want to separate further, use a 40px gap. Please don't use numbers like 42px or 21px, it will stress me out.
+
+## Styleguide
+
+##### Title
+18px, bold, uppercase, #343434
+`style="font-family:'sofia', Helvetica, Arial, sans-serif; font-weight: bold; color: #343434; font-size: 18px; text-transform: uppercase;"`
+
+##### Paragraph
+16px, #888888
+`style="font-family:'sofia', Helvetica, Arial, sans-serif; font-weight: normal; color: #888888; font-size: 16px;"`
 
 ## Quick cards
 See below for quick access to our most popular cards, simply copy and paste them into your template.

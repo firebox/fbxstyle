@@ -3,22 +3,34 @@ Master cards &amp; style guides
 
 Welcome to the email design guideline for Firebox!
 
-##Contents
+### Contents
 - Getting started
 - Styles used
 - Common card sample code (quick access)
+- Testing/troubleshooting
 
-###Getting started
+### Getting started
 If you are starting from scratch, use the <a href="https://github.com/firebox/fbxstyle/blob/master/master-template-blank.html">master-blank-template.html</a>. This has all of the styles, the logo and the footer. If you have an existing template and want to add extra cards that are not included in the builder, download or view the <a href="https://github.com/firebox/fbxstyle/blob/master/master-cards.html">master-cards.html</a> file.
 
-###How to use the cards
-Each card can be used independently from one another as there is no parent container or wrapper.
-To copy a card, start from the `<!-- [NAME] CARD-->` and copy until the `<!-- END [NAME] CARD-->`
+#### Card anatomy
+A card is an independent row that represents a display pattern. Basically, it is a section that is designed differently. See below for a image of how a card is split up.
 
-##Quick cards
+#### How to use the cards
+As each card is an independent row, you can simply just copy and paste it anywhere between the `<body>` and `</body>` HTML tag. To copy a card, start from the `<!-- [NAME] CARD-->` and copy until the `<!-- END [NAME] CARD-->`. Each card in the <a href="https://github.com/firebox/fbxstyle/blob/master/master-cards.html">master-cards.html</a> file will be named in this format.
+
+## Style the cards
+You can style the cards pretty much any way you want. These are colourless and to be used as a template for whatever design you want to achieve.
+
+#### Changing text colours
+In the master cards file, text should only be two colours - `#343434` for title text and `#888888` for body text. When setting the `font-color` you should always apply the style to the `<td>` e.g `<td style="font-color: #000000;">` if you are using the mast cards then the `font-color` should already be applied and simple to change.
+
+#### Changing background colour
+Changing the background colour of a card is super easy. You can change the background colour in two ways, either you want the entire card to be one colour or you want a background colour and a container colour. Look for the `bgcolor="#F6F6F6"`
+
+## Quick cards
 See below for quick access to our most popular cards, simply copy and paste them into your template.
 
-####Hero card
+#### Hero card
 The main use for this card is to introduce a new or hero product.
 
 ```
@@ -166,3 +178,9 @@ Buttons
      </td>
    </tr>
 ```
+
+How to test
+Litmus
+
+Testing
+- On responsive the box doesn't fit 100%

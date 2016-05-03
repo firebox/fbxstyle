@@ -15,6 +15,10 @@ If you are starting from scratch, use the <a href="https://github.com/firebox/fb
 #### Card anatomy
 A card is an independent row that represents a display pattern. Basically, it is a section that is designed differently. See below for a image of how a card is split up.
 
+<img src="http://media.firebox.com/i/github/anatomy.png" width="300">
+
+You can see that the card is made up of table rows and columns. When you are editing or visualising the structure of the card, use this as a reference.
+
 #### How to use the cards
 As each card is an independent row, you can simply just copy and paste it anywhere between the `<body>` and `</body>` HTML tag. To copy a card, start from the `<!-- [NAME] CARD-->` and copy until the `<!-- END [NAME] CARD-->`. Each card in the <a href="https://github.com/firebox/fbxstyle/blob/master/master-cards.html">master-cards.html</a> file will be named in this format.
 
@@ -60,14 +64,23 @@ In a nutshell the 20px rule is a guide to how much padding everything should hav
 The only time you can break the 20px rule is when you need to separate components further apart or you need to group text together. To group text together, you can use a 10px gap and if you want to separate further, use a 40px gap. Please don't use numbers like 42px or 21px, it will stress me out.
 
 ## Styleguide
+See below for examples on basic styling for the cards. Feel free to change these styles for certain campaigns but please do not have the body text lighter than #888888
 
 ##### Title
 18px, bold, uppercase, #343434
-`style="font-family:'sofia', Helvetica, Arial, sans-serif; font-weight: bold; color: #343434; font-size: 18px; text-transform: uppercase;"`
+
+Example code:
+``
+style="font-family:'sofia', Helvetica, Arial, sans-serif; font-weight: bold; color: #343434; font-size: 18px; text-transform: uppercase;"
+``
 
 ##### Paragraph
 16px, #888888
-`style="font-family:'sofia', Helvetica, Arial, sans-serif; font-weight: normal; color: #888888; font-size: 16px;"`
+
+Example code:
+``
+style="font-family:'sofia', Helvetica, Arial, sans-serif; font-weight: normal; color: #888888; font-size: 16px;"
+``
 
 ## Quick cards
 See below for quick access to our most popular cards, simply copy and paste them into your template.
@@ -134,22 +147,22 @@ The main use for this card is to introduce a new or hero product.
         </td>
     </tr>
 </table>
-<!-- END HERO SECTION-->```
+<!-- END HERO SECTION-->
+```
 
-####Hero card
-The main use for this card is to introduce a new or hero product.
-
+#### Image or slice card
+The main purpose of this page is to promote your imagery.
 
 ```
-<!-- IMAGE CARD -->
+<!-- IMAGE/SLICE CARD -->
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
     <tr>
         <td bgcolor="#f6f6f6" align="center" style="padding: 0px 15px 0px 15px;" class="slice-padding">
             <table border="0" cellpadding="0" cellspacing="0" width="600" class="responsive-table">
                 <tr>
 									<td align="center" bgcolor="#FFFFFF" valign="middle">
-											<a href="https://www.firebox.com/chart" target="_blank">
-													<img src="http://media.firebox.com/i/nl/nl1073/top102.jpg" width="600" style="display: block; width: 600px;" alt="Top 10 Products during March" title="Top 10 Products during March" border="0" class="img-max">
+											<a href="http://www.dot.com?itc=FB_ITC&nl_id=NL_ID" target="_blank">
+													<img src="http://media.firebox.com/i/nl/nl1073/top102.jpg" width="600" style="display: block; width: 600px;" alt="FB_ALT" title="FB_TITLE" border="0" class="img-max">
 											</a>
 									</td>
                 </tr>
@@ -159,54 +172,7 @@ The main use for this card is to introduce a new or hero product.
 </table>
 ```
 
-```
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
-    <tr>
-        <td bgcolor="#F6F6F6" style="padding: 0px 15px 0px 15px;" class="smaller-padding">
-            <div align="center">
-                <table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper">
-                    <tr>
-                      <td background="https://i.imgur.com/YJOX1PC.png" bgcolor="#7bceeb" width="120" height="92" valign="top">
-                      <!--[if gte mso 9]>
-                      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:120px;height:92px;">
-                        <v:fill type="tile" src="https://i.imgur.com/YJOX1PC.png" color="#7bceeb" />
-                        <v:textbox inset="0,0,0,0">
-                      <![endif]-->
-                      <div>
-                        Hello guys
-                      </div>
-                      <!--[if gte mso 9]>
-                      </v:textbox>
-                      </v:rect>
-                      <![endif]-->
-                      </td>
-                    </tr>
-                </table>
-            </div>
-        </td>
-    </tr>
-</table>
-```
-
-
-##Email styles
-I have made some amendments to the colours of the emails due to the brightness not rendering well on older monitors
-
-Heading
-#343434
-
-Paragraph and sub copy
-#888888
-
-When adding text styles and fonts to an email you need a few parameters to get started.
-Code
-
-
-When I view a card on mobile it has a gap
-slice and section padding
-
-
-Buttons
+## Buttons
 ```
 <tr cellspacing="0" cellpadding="0">
   <!--[if mso]>

@@ -26,33 +26,12 @@ As each card is an independent row, you can simply just copy and paste it anywhe
 You can style the cards pretty much any way you want. These are colourless and to be used as a template for whatever design you want to achieve.
 
 #### Changing text colours
-In the master cards file, text should only be two colours - `#343434` for title text and `#888888` for body text. When setting the `font-color` you should always apply the style to the `<td>` e.g `<td style="font-color: #000000;">` if you are using the mast cards then the `font-color` should already be applied and simple to change.
+In the master cards file, text should only be two colours - `#343434` for title text and `#888888` for body text. When setting the `font-color` you should always apply the style to the `<td>` e.g `<td style="font-color: #000000;">` if you are using the master cards then the `font-color` should already be applied and simple to change.
 
 #### Changing background colour
-Changing the background colour of a card is super easy. You can change the background colour in two ways, either you want the entire card to be one colour or you want a background colour and a container colour. Look for the `bgcolor`. See the  example below:
+Changing the background colour of a card is super easy. You can change the background colour in two ways, either you want the entire card to be one colour or you want a background colour and a container colour. Look for the `bgcolor=`. See the  example below:
 
-`<table border="0" cellpadding="0" cellspacing="0" width="100%">
-    <tr>
-        <td bgcolor="OUTSIDECOLOUR">
-            <div align="center" style="padding: 0px 20px 0px 20px;">
-                <table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper">
-                    <tr>
-                        <td style="padding: 0px 0px 20px 0px;" class="logo">
-                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
-                                <tr>
-                                    <td bgcolor="INSIDECOLOUR" width="600" align="center" class="header" style="font-weight: bold; font-family: 'Arial', sans-serif; color: #fff; padding-top: 25px; font-size: 42px; line-height: 1;">
-                                        Pebble Time Smartwatch and new products this week
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </td>
-    </tr>
-</table>
-`
+<img src="http://media.firebox.com/i/github/bgcolour.png" width="600">
 
 ## Style rules
 For the cards please follow the rules set.

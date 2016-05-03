@@ -5,7 +5,9 @@ Welcome to the email design guideline for Firebox!
 
 ### Contents
 - Getting started
-- Styles used
+- Style the cards
+- Style rules
+- Styleguide
 - Common card sample code (quick access)
 - Testing/troubleshooting
 
@@ -61,7 +63,7 @@ Example code:
 style="font-family:'sofia', Helvetica, Arial, sans-serif; font-weight: normal; color: #888888; font-size: 16px;"
 ``
 
-## Quick cards
+## Common cards
 See below for quick access to our most popular cards, simply copy and paste them into your template.
 
 #### Hero card
@@ -149,21 +151,6 @@ The main purpose of this page is to promote your imagery.
         </td>
     </tr>
 </table>
-```
-
-## Buttons
-```
-<tr cellspacing="0" cellpadding="0">
-  <!--[if mso]>
-      <td style="text-align: center;" class="btn" width="250" height="37" align="center" bgcolor="#343434">
-  <![endif]-->
-  <!--[if !mso]><!-- -->
-    <td style="text-align: center;" class="btn" width="250" height="37" align="center">
-  <!--<![endif]-->
-       <a href="https://www.firebox.com/admin/customerreviews?itc=944&utm_source=email&utm_medium=welcome&utm_campaign=welcome_2" target="blank" style="font-family:'sofia', Helvetica, Arial, sans-serif; display: inline-block; padding: 10px 20px; border-radius: 2px; background-color: #343434 !important; font-weight: bold; color: #fff; line-height: 1; text-decoration: none; margin: 0; text-transform: uppercase;">
-         View more reviews</a>
-     </td>
-   </tr>
 ```
 
 How to test

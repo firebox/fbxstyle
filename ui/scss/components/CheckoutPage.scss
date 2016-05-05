@@ -1,0 +1,666 @@
+.checkout-page {
+
+    /* Dispatch panel */
+    &__group {
+        margin-bottom: 30px;
+    }
+    &__group-title {
+        font-family: NovecentoWide;
+        font-weight: bold;
+        font-size: 1.5em;
+        margin: 3px 0;
+    }
+    &__group-subtitle {
+        color: lighten($charcoal, 30%);
+        margin: 3px 0;
+    }
+
+
+    /* Login/facebook panel*/
+    &__login-panel {
+        display: flex;
+
+        @include phone-up {
+            flex-direction: column;
+        }
+
+        @include tablet-up {
+            flex-direction: row;
+        }
+    }
+    &__login-panel-facebook {
+        flex: 1;
+
+        @include phone-up {
+            padding: 10px 10px 10px 0px;
+        }
+
+        @include tablet-up {
+            padding: 20px 10px 0px 0px;
+        }
+
+
+    }
+    &__login-panel-account {
+        flex: 1;
+        padding: 20px;
+        background-color: $light-fade;
+    }
+    &__login-button-container {
+        margin: 10px 0;
+        max-width: 240px;
+    }
+
+
+    &__delivery-number {
+        font-size: 1.5em;
+        margin: 10px 0 5px 0;
+    }
+    &__delivery-location {
+        color: lighten($charcoal,30%);
+        font-size: 0.8em;
+    }
+    &__delivery-location-change {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    &__divider {
+        margin: 20px 0;
+        width: 100%;
+        height: 1px;
+        border-top: 1px dashed lighten($charcoal,30%);
+    }
+
+    &__reset-password-box {
+        display: flex;
+        flex-direction: column;
+        margin: 5px 0;
+
+        @include tablet-up {
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+    &__reset-password-field {
+        margin-bottom: 5px;
+
+        @include tablet-up {
+            margin-right: 5px;
+            margin-bottom: 0px;
+        }
+    }
+
+    &__user-welcome {
+        display: flex;
+
+        @include phone-up {
+            margin: 10px 0 30px 0;
+        }
+
+        @include tablet-up {
+            margin: 30px 0;
+        }
+    }
+    &__user-profile-image {
+        margin-right: 5px;
+    }
+    &__user-steps {
+        color: lighten($charcoal,30%);
+    }
+    &__user-logout {
+        color: lighten($charcoal,30%);
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    &__section-title {
+        font-family: NovecentoWide;
+        font-weight: bold;
+        font-size: 1.4em;
+    }
+    &__section-subtitle {
+        color: lighten($charcoal,30%);
+        margin-bottom: 5px;
+    }
+
+    /* Dispatch panel */
+    &__dispatch-groups {
+        margin: 10px 0;
+    }
+
+
+    /* Payment panel */
+    &__payment-title {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin: 20px 0 10px 0;
+    }
+    &__paypal-section {
+        display: flex;
+        margin: 10px 0;
+
+        @include phone-up {
+            flex-direction: column;
+        }
+
+        @include tablet-up {
+            flex-direction: row;
+        }
+    }
+    &__paypal-text {
+        flex: 1;
+
+        @include phone-up {
+            margin-left: 0px;
+        }
+
+        @include tablet-up {
+            margin-left: 20px;
+        }
+    }
+    &__card-section {
+        background-color: lighten($secure2,18%);
+
+        @include phone-up {
+            padding: 10px;
+        }
+
+        @include tablet-up {
+            padding: 10px 20px;
+        }
+    }
+
+    &__gift-message {
+        margin-top: 20px;
+    }
+    &__gift-message-info {
+        color: lighten($charcoal,30%);
+        font-size: 0.8em;
+    }
+    &__gift-message-form {
+        margin: 10px 0;
+        padding: 10px;
+        background-color: lighten($paypal,8%);
+    }
+
+    &__voucher {
+        color: $notice;
+        display: flex;
+        margin: 15px 0;
+        text-align: right;
+        justify-content: flex-end;
+    }
+    &__voucher-remove {
+        color: $off-grey;
+        cursor: pointer;
+        text-decoration: underline;
+        font-size: 0.9em;
+        user-select: none;
+        margin-left: 15px;
+    }
+
+    &__voucher-form {
+        background-color: #F8F8F8;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        padding: 10px;
+
+        @include tablet-up {
+            flex-wrap: nowrap;
+        }
+
+        &--error {
+            background-color: $error-background;
+            box-shadow: inset 0px 0px 1px $error-highlight;
+        }
+    }
+
+    &__voucher-form-text {
+        align-items: center;
+        display: flex;
+        font-size: 0.9em;
+        width: 100%;
+        margin-bottom: 5px;
+
+        @include tablet-up {
+            flex: 1;
+        }
+    }
+
+    &__voucher-form-input {
+        font-size: 16px;
+        outline: none;
+    }
+
+    &__voucher-status {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+}
+
+.wrapping-cta {
+    display: flex;
+    flex-direction: column;
+
+    &__close {
+        color: red;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+    }
+
+    h2 {
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        @include phone-up {
+            margin: 0;
+        }
+
+        @include tablet-up {
+            margin: 10px 0;
+        }
+    }
+
+    &__column {
+        flex: 1;
+        padding: 10px;
+
+    }
+
+    &__column-small {
+        flex: 0.5;
+        padding: 10px;
+
+        img {
+            @include phone-up {
+                width: 100%;
+                max-width: 100px;
+            }
+
+            @include tablet-up {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__action {
+        flex: 0.5;
+        background-color: $medium-fade;
+        text-align: center;
+        padding: 25px;
+
+        a {
+            text-decoration: underline !important;
+        }
+
+    }
+
+    &__wrap {
+        display: flex;
+
+        @include phone-up {
+            flex-direction: column;
+        }
+
+        @include tablet-up {
+            flex-direction: row;
+        }
+    }
+
+    &__rule {
+        border: 1px solid $medium-fade;
+        margin: 0;
+        border-bottom: none;
+    }
+
+}
+
+.checkout-header {
+    font-family: NovecentoWide;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:        border-box;
+
+
+    @include phone-up {
+        font-size: 1.4em;
+        padding: 20px 30px 0 30px;
+        text-align: center;
+        background: $white;
+        color: $secure;
+    }
+
+    @include tablet-up {
+        padding: 25px 0;
+        font-size: 2em;
+        background: transparent;
+        color: $charcoal;
+    }
+
+    @include desktop-up {
+      padding: 50px 0;
+    }
+}
+
+.checkout-header-icon {
+
+    @include phone-up {
+        width: 30px;
+        height: 30px;
+        display: none;
+    }
+
+    @include tablet-up {
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+    }
+    margin-right: 10px;
+}
+
+.checkout-body {
+    display: flex;
+    flex-direction: column;
+
+     @media only screen and (min-width:1024px) {
+        flex-direction: row;
+        margin: 0 20px;
+    }
+}
+
+.checkout-main-panel {
+    background-color: $white;
+    flex: 1;
+
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:        border-box;
+
+    @include phone-up {
+        width: 100%;
+        padding: 20px 20px 20px 20px;
+    }
+
+    @include desktop-up {
+        margin-right: 30px;
+        margin-bottom: 30px;
+        padding: 20px 20px 40px 20px;
+    }
+}
+
+.checkout-side-panel {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+
+    @include desktop-up {
+        width: 320px;
+        margin-bottom: 30px;
+    }
+
+    &--align-items-end {
+        align-items: flex-end;
+    }
+
+    &__inner {
+        padding: 20px 20px 40px 20px;
+        box-sizing: border-box;
+
+        @include phone-up {
+            width: 100%;
+            background-color: darken($white,3%);
+        }
+
+        @include desktop-up {
+            width: 320px;
+            background-color: $white;
+        }
+
+        &--fixed {
+            /* Don't be fixed on mobile, but fine for desktop and up */
+            position: static;
+
+            @include desktop-up {
+                position: fixed;
+            }
+        }
+    }
+}
+
+.checkout-totals {
+    &__summary-title {
+        font-family: NovecentoWide;
+        font-weight: bold;
+        font-size: 1.5em;
+        margin: 10px 0;
+    }
+
+    &__summary-row {
+        display: flex;
+    }
+    &__summary-name {
+        flex: 2;
+        text-align: left;
+    }
+    &__summary-value {
+        color: lighten($charcoal,30%);
+        flex: 1;
+        text-align: right;
+
+        &--important {
+            color: inherit;
+        }
+    }
+
+    &__summary-divider {
+        height: 1px;
+        margin: 10px 0;
+        background-color: #EFEFEF;
+    }
+
+    &__summary-button {
+        margin: 15px 0;
+    }
+
+    &__summary-cards {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+.checkout-guest-address-select {
+    margin-bottom: 30px;
+
+    &__address-forms {
+        display: flex;
+
+        @include phone-up {
+            flex-direction: column;
+        }
+
+        @include desktop-up {
+            flex-direction: row;
+        }
+    }
+    &__address-form {
+        flex: 1;
+        padding-right: 10px;
+
+        &--left {
+            padding-left: 10px;
+            padding-right: 0px;
+        }
+
+    }
+    &__address-title {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin: 20px 0 10px 0;
+    }
+
+    &__save-addresses {
+        margin: 10px 0;
+    }
+}
+
+.checkout-user-address-select {
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+
+    &__title {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin: 20px 0 20px 0;
+    }
+
+    &__addresses {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include phone-up {
+            flex-direction: column;
+        }
+
+        @include tablet-up {
+            flex-direction: row;
+        }
+
+    }
+
+    &__address-container {
+        box-sizing: border-box;
+        display: flex;
+        padding: 4px 0;
+
+        @include phone-up {
+            width: 100%;
+        }
+
+        @include tablet-up {
+            width: 50%;
+        }
+    }
+
+    &__address {
+        display: flex;
+        width: 100%;
+    }
+}
+
+
+.checkout-item-quantity {
+
+    &__quantities {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet-up {
+            flex-direction: row;
+        }
+    }
+    &__item-quantity {
+        margin-right: 10px;
+    }
+    &__quantity {
+        flex: 1;
+        margin: 0 0 15px 0;
+    }
+    &__quantity-label {
+        margin: 0 0 10px 0;
+
+        @include phone-up {
+            display: none;
+        }
+
+        @include tablet-up {
+            display: inline-block;
+        }
+    }
+
+    &__giftwrap {
+        flex: 1;
+        margin: 0 0 15px 0;
+    }
+    &__giftwrap-label {
+        margin: 0 0 10px 0;
+    }
+
+    &__wrap-label {
+        margin: 0 0 10px 0;
+    }
+    &__quantity-control {
+        display: flex;
+        height: 30px;
+    }
+    &__quantity-display {
+        padding: 2px 0;
+        text-decoration: none;
+        border: 1px solid #E1E1E1;
+        color: #343434;
+        margin: 0;
+        width: 30px;
+        text-align: center;
+        background-color: $white;
+        border-right: none;
+        border-left: none;
+
+        &--readonly {
+            border: 1px solid #E1E1E1;
+        }
+
+    }
+    &__quantity-button {
+        align-items: center;
+        background-color: #EFEFEF;
+        border: 1px solid #E1E1E1;
+        color: #343434;
+        cursor: pointer;
+        display: flex;
+        font-size: 0.7em;
+        justify-content: center;
+        margin: 0;
+        padding: 2px 0;
+        user-select: none;
+        width: 30px;
+    }
+    &__crapwrap-toggle {
+        cursor: pointer;
+        flex: 2;
+        font-size: 0.9em;
+        margin-top: 5px;
+        user-select: none;
+    }
+    &__giftwrap-quantity {
+
+    }
+    &__giftwrap-options {
+        display: flex;
+        align-items: stretch;
+    }
+    &__giftwrap-select {
+        margin-right: 5px;
+    }
+    &__giftwrap-info {
+        color: lighten($charcoal, 30%);
+        cursor: pointer;
+        text-decoration: underline;
+        font-size: 0.9em;
+        margin-left: 10px;
+    }
+}

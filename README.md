@@ -8,7 +8,6 @@ Welcome to the email design guideline for Firebox!
 - Style the cards
 - Style rules
 - Styleguide
-- Common card sample code (quick access)
 - Testing/troubleshooting
 
 ### Getting started
@@ -35,6 +34,31 @@ Changing the background colour of a card is super easy. You can change the backg
 
 <img src="http://media.firebox.com/i/github/bgcolour.png" width="600">
 
+Below is what it looks like in the code:
+```
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td bgcolor="OUTSIDECOLOUR">
+            <div align="center" style="padding: 0px 20px 0px 20px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper">
+                    <tr>
+                        <td style="padding: 0px 0px 20px 0px;" class="logo">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                <tr>
+                                    <td bgcolor="INSIDECOLOUR" width="600" align="center" class="header" style="font-weight: bold; font-family:'sofia', Helvetica, Arial, sans-serif; color: #fff; padding-top: 25px; font-size: 42px; line-height: 1;">
+                                        Pebble Time Smartwatch and new products this week
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+```
+
 ## Style rules
 For the cards please follow the rules set.
 
@@ -52,7 +76,7 @@ See below for examples on basic styling for the cards. Feel free to change these
 
 Example code:
 ``
-style="font-family:'sofia', Helvetica, Arial, sans-serif; font-weight: bold; color: #343434; font-size: 18px; text-transform: uppercase;"
+style="font-family:'sofia', Helvetica, Arial, sans-serif; font-weight: bold; color: #343434; font-size: 18px; text-transform: uppercase; text-align: center;"
 ``
 
 ##### Paragraph
@@ -60,101 +84,20 @@ style="font-family:'sofia', Helvetica, Arial, sans-serif; font-weight: bold; col
 
 Example code:
 ``
-style="font-family:'sofia', Helvetica, Arial, sans-serif; font-weight: normal; color: #888888; font-size: 16px;"
+style="font-family:'sofia', Helvetica, Arial, sans-serif; font-weight: normal; color: #888888; font-size: 16px; text-align: center;"
 ``
 
-## Common cards
-See below for quick access to our most popular cards, simply copy and paste them into your template.
-
-#### Hero card
-The main use for this card is to introduce a new or hero product.
-
-```
-<!-- HERO SECTION-->
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
-    <tr>
-        <td bgcolor="#F6F6F6" align="center" style="padding: 0px 15px 20px 15px;" class="section-padding">
-            <table border="0" cellpadding="0" cellspacing="0" width="600" class="responsive-table"> <!-- LONGER WIDTH THAN 600 FOR OUTLOOK 07,10,11 -->
-                <tr>
-                    <td>
-                        <table cellspacing="0" cellpadding="0" border="0" width="100%">
-                          <tr>
-          									<td align="center" bgcolor="#f6f6f6" valign="middle">
-          											 <a href="http://www.firebox.com/product/7479/Luminoodle" target="_blank">
-          												 <img alt="Glow in the Park" title="Glow in the park" src="http://media.firebox.com/i/nl/nl1073/luminoodle.jpg" width="600" border="0" style="display: block;" class="img-max">
-          											</a>
-          									</td>
-                          </tr>
-													<tr>
-															<td align="center" bgcolor="#FFFFFF" valign="middle" width="600" class="wrapper" style="padding: 15px">
-
-															<table cellspacing="0" cellpadding="0" style="width: 100%;" class="responsive-table" width="300">  <!-- STYLE WIDTH FOR CHROME BROWSER -->
-
-																	 <tr cellspacing="0" cellpadding="0">
-
-																			<td cellspacing="0" cellpadding="0" colspan="4"  style="font-family: Arial, sans-serif; color: #343434; font-size: 18px; font-weight: bold; text-align: center; padding: 0px 15px 15px 15px;">
-																				 <a href="http://www.firebox.com/product/7479/Luminoodle" target="_blank" style="color: #343434; text-decoration: none;">LUMINOODLE</a>
-																			</td>
-																	</tr>
-																	<tr>
-
-																			<td cellspacing="0" cellpadding="0" colspan="4"  style="text-align: center; font-family: 'Arial', sans-serif; color: #999999 !important; font-size: 14px; line-height: 20px; font-weight: normal; padding: 0px 15px 15px 15px;">
-																			A versatile string of LEDs producing 180 lumens (or should that be ramens?) of light. Powered by a powerful 4400mAh USB rechargeable battery pack and stored neatly inside a nylon carry bag that doubles up as a lantern. Clever, eh?
-																			</td>
-																	</tr>
+## Checks
+#### Alt & title tags
+Make sure your alt and title tags have been entered. Every card will have `FB_ALT` & `FB_TITLE` by default so do a quick search to see if you find any.
 
 
-																	 <tr cellspacing="0" cellpadding="0">
-																			<td cellspacing="0" cellpadding="0" colspan="4"  style="font-family: Arial, sans-serif; color: #999999; font-size: 18px; line-height: 25.92px; font-weight: bold; text-align: center; padding: 0px 15px 15px 15px;">
-																					<strong>&pound;29.99</strong>
-																		 </td>
-																	</tr>
+## Testing
+#### Stage 1: In your browser
+Make sure your email works well in in your browser. Ensure you test in a mobile view.
 
-																	<tr cellspacing="0" cellpadding="0">
-																			<td cellspacing="0" cellpadding="0" style="width: auto;">&nbsp;</td>
-																			<td colspan="2" style="text-align: center; background-color: #000000 !important; border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; max-width: 175px !important;" width="50%" height="37" bgcolor="#000000">
-																					<a href="http://www.firebox.com/product/7479/Luminoodle" target="blank" style="font-family: 'Arial', sans-serif; display: inline-block; background-color: #000000 !important; font-weight: normal; color: #fff; border-top-left-radius: 2px; border-top-right-radius: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; text-decoration: none; margin: 0;">BUY NOW</a>
-																				</td>
-																			<td cellspacing="0" cellpadding="0" style="width: auto;">&nbsp;</td>
-																	</tr>
+#### Stage 2: Litmus
+Login details will be provided by Lewis. Paste in your code and preview in many email clients.
 
-															</table>
-															</td>
-													</tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
-<!-- END HERO SECTION-->
-```
-
-#### Image or slice card
-The main purpose of this page is to promote your imagery.
-
-```
-<!-- IMAGE/SLICE CARD -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
-    <tr>
-        <td bgcolor="#f6f6f6" align="center" style="padding: 0px 15px 0px 15px;" class="slice-padding">
-            <table border="0" cellpadding="0" cellspacing="0" width="600" class="responsive-table">
-                <tr>
-									<td align="center" bgcolor="#FFFFFF" valign="middle">
-											<a href="http://www.dot.com?itc=FB_ITC&nl_id=NL_ID" target="_blank">
-													<img src="http://media.firebox.com/i/nl/nl1073/top102.jpg" width="600" style="display: block; width: 600px;" alt="FB_ALT" title="FB_TITLE" border="0" class="img-max">
-											</a>
-									</td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
-```
-
-How to test
-Litmus
-
-Testing
-- On responsive the box doesn't fit 100%
+#### Stage 3: Real emails
+Litmus isn't 100% accurate so testing with real email clients need to be done. Tests can be sent to fireboxtest@outlook.com

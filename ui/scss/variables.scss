@@ -1,0 +1,70 @@
+$media: '//media.firebox.com';
+$header-font: NovecentoWide, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+/* See style guide: http://www.firebox.com/admin/style_guide */
+$red: #ef353d;
+$cyan: #7ec0bf;
+$gold: #e4a706;
+$dark-red: #67161a;
+$dark-cyan: #156564;
+$dark-gold: #674c03;
+$turquoise: #23ae8f;
+$green: #53a270;
+$grey: #585858;
+$dark-turquoise: #1b7962;
+$dark-green: #327149;
+$charcoal: #343434;
+$off-white: #efefef;
+$dark-off-white: #d6cdbc;
+$off-grey: #908b80;
+$black: #000;
+$white: #FFF;
+
+$facebook:          #3B5998;
+$secure:            #00C385; //old #9BF4A4
+$secure2:           #9BF4A4;
+$paypal:            #C6F0F4; // friend too
+$paypal2:           #0299E2;
+$notice:            #79C0C0;
+$standard:          #F0ECEC; /* jake added this, does it exist? */
+$fade:              #EFEFEF;
+
+// for backgrounds
+$light-fade:        #F6F6F6;
+$medium-fade:       darken($fade, 5%); // #e2e2e2
+$dark-fade:         darken($fade, 10%); // #d5d5d5
+
+
+$error-background:  #FFEFEF;
+$error-highlight:   #FF0000;
+$success-background:  #79C0C0;
+$success-highlight:   #000000;
+
+$phone-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$desktop-xl-width: 1440px;
+
+@mixin phone-up {
+  @media (min-width: #{$phone-width}) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop-xl-up {
+  @media (min-width: #{$desktop-xl-width}) {
+    @content;
+  }
+}

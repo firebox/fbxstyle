@@ -1,0 +1,70 @@
+.cword {
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+    text-align: center;
+    font-size: 16px;
+
+    h1 {
+        @include phone-up {
+            font-size: 1.5em;
+        }
+
+        @include desktop-up {
+            font-size: 2em;
+        }
+    }
+
+    * {
+       -moz-box-sizing:    border-box;   /* Firefox 1, probably can drop this */
+       -webkit-box-sizing: border-box;   /* Safari 3-4, also probably droppable */
+        box-sizing:        border-box;   /* Everything else */
+    }
+
+    &__cat-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &__cat {
+        width: 33.333333%;
+        padding: 0;
+        opacity: 0; 
+        display: block;
+        @include animation(all,0.5s,linear);
+
+        img {
+            width: 100%;
+
+            @include phone-up {
+                padding: 3px 5px;
+            }
+
+            @include desktop-up {
+                padding: 5px 10px;
+            }
+        }
+
+    }
+
+    .alpha-button {
+        color: $white !important;
+    }
+
+}
+
+.firsttext {
+    opacity: 0; 
+    @include animation(all,0.5s,linear);
+}
+
+.secondtext {
+    opacity: 0;
+    @include animation(all,1.5s,linear);
+}
+
+.thirdtext {
+    opacity: 0;
+    @include animation(all,1.5s,linear);
+}

@@ -1,0 +1,552 @@
+.wrap-battle {
+
+    * {
+       -moz-box-sizing:    border-box;   /* Firefox 1, probably can drop this */
+       -webkit-box-sizing: border-box;   /* Safari 3-4, also probably droppable */
+        box-sizing:        border-box;   /* Everything else */
+    }
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    background: url($media + "/i/wrapbattle/crete.jpg") repeat; 
+
+        @media only screen and (min-width:320px) {
+            padding: 0;
+        }
+
+        @media only screen and (min-width:768px) {
+            padding: 30px 0;
+        }
+
+        @media only screen and (min-width:1280px) {
+            padding: 60px 0;
+        }
+
+        &__trump {
+            font-family: "trumpsoftpro",sans-serif;
+
+            &--border {
+                padding: 10px;
+                border: 5px solid #000;
+                color: #000;
+            }
+
+        }
+
+        &__abol {
+            font-family: "abolition",sans-serif;
+
+            &--border {
+                padding: 10px;
+                border: 5px solid #F55550;
+                color: #F55550;
+            }
+        }
+
+        img {
+
+            max-width: 100%;
+
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+
+            -webkit-transform-style: preserve-3d;
+            -moz-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        &__scale {
+            @include animation(all,0.2s,linear);
+
+            &:hover {
+                -ms-transform: scale(1.09); /* IE 9 */
+                -webkit-transform: scale(1.09); /* Safari */
+                transform: scale(1.09);
+            }
+        }
+
+        &__skewX {
+            @include animation(all,0.2s,linear);
+
+                &:hover {
+                -ms-transform: skewX(20deg); /* IE 9 */
+                -webkit-transform: skewX(20deg); /* Safari */
+                transform: skewX(20deg);
+                }
+        }
+
+        &__skewY {
+            @include animation(all,0.2s,linear);
+
+                &:hover {
+                -ms-transform: skewY(20deg); /* IE 9 */
+                -webkit-transform: skewY(20deg); /* Safari */
+                transform: skewY(20deg);
+                }
+        }
+
+        &__bigtext {
+
+            @media only screen and (min-width:320px) {
+                margin: 0 0 10px 0; 
+            }
+
+            @media only screen and (min-width:480px) {
+                margin: 0 0 20px 0; 
+            }
+
+        }
+    
+}
+
+.wrap-battle-container { 
+    max-width: 960px;
+    position: relative;
+    min-height: 1000px;
+    background: url($media + "/i/wrapbattle/background_worn.jpg") top center;
+
+    -webkit-box-shadow: 6px 6px 49px -2px rgba(100,100,100,1);
+    -moz-box-shadow: 6px 6px 49px -2px rgba(100,100,100,1);
+    box-shadow: 6px 6px 49px -2px rgba(100,100,100,1);
+
+        @media only screen and (min-width:320px) {
+            width: 100%;
+            margin: 0 auto;
+            border: 5px solid $white;
+        }
+
+        @media only screen and (min-width:480px) {
+            border: 10px solid $white;
+        }
+
+        @media only screen and (min-width:1024px) {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        @media only screen and (min-width:1280px) {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+    #scene {
+
+        position: relative;
+
+        @media only screen and (min-width:320px) {
+            width: 100%;
+            height: 280px;
+        }
+
+        @media only screen and (min-width:480px) {
+            width: 100%;
+            height: 520px;
+        }
+
+        @media only screen and (min-width:768px) {
+            width: 100%;
+            height: 740px;
+        }
+
+        @media only screen and (min-width:1280px) {
+            width: 100%;
+            height: 820px;
+        }
+
+    }
+
+    &__layer {
+        height: 100%;
+        width: 100%;
+        list-style: none;
+    }
+
+
+    &__overflow {
+        overflow: hidden;
+    }
+
+    &__half {
+        width: 50%;
+        float: left;
+        position: relative;
+        min-height: 1px;
+
+            @media only screen and (min-width:320px) {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            @media only screen and (min-width:480px) {
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+
+            @media only screen and (min-width:768px) {
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+
+    }
+
+    &__full {
+        width: 100%;
+        float: left;
+        position: relative;
+        min-height: 1px;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    &__text {
+        margin-bottom: 15px;
+
+            @media only screen and (min-width:320px) {
+                margin-bottom: 10px;
+            }
+
+            @media only screen and (min-width:480px) {
+                margin-bottom: 15px;
+            }
+    }
+
+    &__tape {
+        position: absolute;
+        z-index: 3;
+
+        @media only screen and (min-width:320px) {
+            display: none;
+            max-width: 100px;
+        }
+
+        @media only screen and (min-width:480px) {
+            max-width: 150px;
+        }
+
+        @media only screen and (min-width:1024px) {
+            display: inline-block;
+        }
+
+        &--top-right {
+            top: -20px;
+            right: -50px;
+            -ms-transform: rotate(45deg); /* IE 9 */
+            -webkit-transform: rotate(45deg); /* Safari */
+            transform: rotate(45deg);
+        }
+
+
+        &--top-left {
+            top: -20px;
+            left: -50px;
+            -ms-transform: rotate(-45deg); /* IE 9 */
+            -webkit-transform: rotate(-45deg); /* Safari */
+            transform: rotate(-45deg);
+        }
+
+        &--bottom-left {
+            bottom: -15px;
+            left: -50px;
+            -ms-transform: rotate(45deg); /* IE 9 */
+            -webkit-transform: rotate(45deg); /* Safari */
+            transform: rotate(45deg);
+        }
+
+
+        &--bottom-right {
+            bottom: -20px;
+            right: -45px;
+            -ms-transform: rotate(-45deg); /* IE 9 */
+            -webkit-transform: rotate(-45deg); /* Safari */
+            transform: rotate(-45deg);
+        }
+        
+    }
+
+}
+
+
+.wrap-battle-top {
+
+    &__blue, &__title, &__presents, &__stars, &__choose, &__vs, &__backdrop, &__foredrop {
+        position: absolute;
+    }
+
+    &__title {
+        width: 80%;
+        left: 10%;
+        top: 15%;
+
+        animation: bulge 0.5s infinite;
+        -webkit-animation: bulge 0.5s infinite;
+
+        z-index: 2;
+
+    }
+
+    &__choose {
+        width: 30%;
+        left: 35%;
+
+        z-index: 2;
+
+            @media only screen and (min-width:320px) {
+                top: 33%;
+            }
+
+            @media only screen and (min-width:768px) {
+                top: 32%;
+            }
+
+            @media only screen and (min-width:1280px) {
+                top: 35%;
+            }
+    }
+
+    &__vs {
+        width: 15%;
+        left: 43%;
+
+        z-index: 2;
+
+            @media only screen and (min-width:320px) {
+                top: 70%;
+            }
+
+            @media only screen and (min-width:480px) {
+                top: 72%;
+            }
+
+            @media only screen and (min-width:1280px) {
+                top: 76%;
+            }
+    }
+
+    &__presents {
+        width: 80%;
+        left: 10%;
+
+        z-index: 1;
+
+            @media only screen and (min-width:320px) {
+                top: 5%;
+            }
+
+            @media only screen and (min-width:480px) {
+                top: 4%;
+            }
+
+            @media only screen and (min-width:768px) {
+                top: 5%;
+            }
+
+    }
+
+    &__backdrop {
+        width: 90%;
+        left: 5%;
+        top: 52%;
+
+        z-index: 1;
+    }
+
+    &__foredrop {
+        width: 88%;
+        left: 6%;
+
+        z-index: 1;
+
+            @media only screen and (min-width:320px) {
+                top: 46%;
+            }
+
+            @media only screen and (min-width:1280px) {
+                top: 50%;
+            }
+    }
+
+    &__stars {
+        background: url($media + "/i/wrapbattle/stars.png") top left no-repeat;
+        height: 100%;
+        width: 110%;
+        left: -5%;
+        top: -5%;
+        max-height: 640px;
+
+        z-index: 0;
+
+            @media only screen and (min-width:320px) {
+                height: 90%;
+            }
+
+            @media only screen and (min-width:768px) {
+                height: 100%;
+            }
+    }
+
+    &__blue {
+        background: url($media + "/i/wrapbattle/blue_tear.jpg") no-repeat;
+
+        z-index: 0;
+
+            @media only screen and (min-width:320px) {
+                background-position: -330px -730px;
+                height: 110%;
+                width: 110%;
+                left: -5%;
+                top: -5%;
+            }
+
+            @media only screen and (min-width:480px) {
+                background-position: 0px -510px;
+                height: 100%;
+            }
+
+            @media only screen and (min-width:768px) {
+                background-position: 0px -220px; 
+            }
+
+            @media only screen and (min-width:1024px) {
+                background-position: 0px -230px; 
+            }
+
+            @media only screen and (min-width:1280px) {
+                background-position: 0px -190px; 
+                height: 94%;
+            }
+
+    }
+
+}
+
+.wrap-battle-char {
+
+    &__right, &__left, &__right-title, &__left-title {
+        position: absolute;
+        z-index: 2;
+    }
+
+    &__right {
+        width: 50%;
+        right: 0;
+        top: 55%;
+        animation: bounce 0.75s infinite;
+        -webkit-animation: bounce 0.75s infinite;
+    }
+
+    &__left {
+        width: 50%;
+        left: 0;
+        top: 57%;
+        animation: bounce 1.2s infinite;
+        -webkit-animation: bounce 1.2s infinite;
+    }
+
+    &__right-title {
+        width: 35%;
+        right: 11%;
+    }
+
+    &__left-title {
+        width: 35%;
+        left: 11%;
+    }
+
+    &__left, &__right {
+
+        @media only screen and (min-width:320px) {
+            top: 49%;
+        }
+
+        @media only screen and (min-width:1280px) {
+            top: 55%;
+        }
+
+    }
+
+    &__left-title, &__right-title {
+
+        @media only screen and (min-width:320px) {
+            top: 75%;
+        }
+
+        @media only screen and (min-width:1280px) {
+            top: 80%;
+        }
+
+    }
+
+}
+
+// Video trailer
+
+.wrap-battle-trailer {
+    position: relative;
+
+        @media only screen and (min-width:320px) {
+            margin-top: 50px;
+        }
+
+        @media only screen and (min-width:768px) {
+            margin-top: 100px;
+        }
+
+    &__title {
+        position: absolute;
+        left: 10%;
+        text-align: center;
+        width: 80%;
+        z-index: 2;
+
+            @media only screen and (min-width:320px) {
+                top: -35px;
+            }
+
+            @media only screen and (min-width:480px) {
+                top: -60px;
+            }
+
+            @media only screen and (min-width:768px) {
+                top: -90px;
+            }
+    }
+
+    &__video {
+        width: 90%;
+        border: 5px solid $charcoal;
+        margin: 0 auto;
+    }
+
+}
+
+// Cta wrap options
+
+.wrap-options {
+    margin: 20px 0;
+    position: relative;
+
+    &__cta {
+        margin: 20px 0 50px 0;
+    }
+
+    &__title {
+        font-size: 60px;
+        text-align: center;
+        margin: 30px 0;
+    }
+
+    &__price {
+        position: absolute;
+        left: 35%;
+        width: 30%;
+        top: -20%;
+        animation: bounce 0.75s infinite;
+        -webkit-animation: bounce 0.75s infinite;
+        z-index: 2;
+    }
+}

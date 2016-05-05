@@ -1,0 +1,46 @@
+/* Small wrapper component for the checkout */
+.checkout-page {
+    background-color: #EFEFEF;
+
+    &__container {
+        margin: 0 auto;
+        max-width: 1140px;
+        padding-bottom: 20px;
+    }
+}
+
+/* Checkout component */
+
+.checkout {
+    font-size: 13px;
+    overflow: auto;
+
+    @include tablet-up {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

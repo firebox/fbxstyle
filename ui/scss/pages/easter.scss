@@ -1,0 +1,442 @@
+.easter-gifts {
+  background: #F0F0F0;
+  font-size: 16px;
+  margin: 0 auto;
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  line-height: 1.44;
+
+  .alpha-button {
+    color: $white;
+    &:hover {
+      background-color: #A17B5B;
+      color: $white;
+    }
+  }
+
+  &-hide-m {
+    @include phone-up {
+      display: none;
+    }
+
+    @include tablet-up {
+      display: block;
+    }
+  }
+
+  &-show-m {
+    @include phone-up {
+      display: block;
+    }
+
+    @include tablet-up {
+      display: none;
+    }
+  }
+
+  &__header {
+    text-align: center;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    z-index: 1;
+
+    @include phone-up {
+      min-height: 290px;
+      background: url($media + "/i/page/easter/header_mobile.jpg") no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    @include tablet-up {
+      min-height: 420px;
+      background: url($media + "/i/page/easter/header.jpg") no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    @include desktop-up {
+      min-height: 500px;
+      background: url($media + "/i/page/easter/header.jpg") no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    @include desktop-xl-up {
+      min-height: 660px;
+      background: url($media + "/i/page/easter/header.jpg") no-repeat center center;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    &-text {
+      width: 60%;
+      margin: 0 auto;
+      max-width: 980px;
+
+      @include phone-up {
+        width: 90%;
+      }
+
+      @include tablet-up {
+        width: 60%;
+      }
+    }
+
+    h1 {
+      font-family: 'Bebas_bold';
+      font-size: 3em;
+      letter-spacing: 4px;
+      line-height: 1.2;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      z-index: 1;
+
+      @include phone-up {
+        font-size: 2em;
+      }
+
+      @include tablet-up {
+        font-size: 3em;
+      }
+    }
+
+    h4 {
+      font-family: 'Minion';
+      margin: 0;
+      color: $grey;
+      font-size: 1.25em;
+      font-weight: normal;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      width: 50%;
+      margin: 0 auto;
+      z-index: 1;
+
+      @include phone-up {
+        width: 90%;
+      }
+
+      @include tablet-up {
+        width: 70%;
+      }
+
+      @include desktop-up {
+        width: 50%;
+      }
+
+      @include desktop-xl-up {
+        width: 40%;
+      }
+    }
+
+    &--light {
+      font-family: 'Bebas_regular';
+      font-weight: lighter;
+    }
+
+  }
+
+  &__top-product {
+    width: 100%;
+    max-width: 970px;
+    margin: -40px auto 40px auto;
+    border-bottom: 1px solid #5E5E5E;
+    padding: 0;
+
+    @include phone-up {
+      width: 90%;
+      margin: 40px auto 40px auto;
+      .f-cont {
+        flex-direction: column;
+      }
+    }
+
+    @include tablet-up {
+      width: 85%;
+      margin: 20px auto 40px auto;
+      .f-cont {
+        flex-direction: row;
+      }
+    }
+
+    @include desktop-up {
+      width: 75%;
+      margin: -40px auto 40px auto;
+    }
+
+
+    &-image {
+      max-width: 100%;
+      width: 100%;
+    }
+
+  }
+
+  &__blocks {
+    @include phone-up {
+      width: 100%;
+    }
+
+    @include tablet-up {
+      width: 90%;
+    }
+
+    @include desktop-up {
+      width: 100%;
+    }
+    max-width: 1010px;
+    margin: 0 auto 80px auto;
+  }
+
+  .f-col--third {
+    flex-basis: 33%;
+    width: 33%;
+
+    @include phone-up {
+      flex-basis: 100%;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    @include tablet-up {
+      flex-basis: 49%;
+      width: 49%;
+      max-width: 49%;
+    }
+
+    @include desktop-up {
+      flex-basis: 33%;
+      width: 33%;
+      max-width: 33%;
+    }
+
+  }
+
+}
+
+.easter-gifts-product {
+  text-align: center;
+  position: relative;
+  margin-bottom: 80px;
+  z-index: 1;
+
+  &__image {
+    max-width: 100%;
+    width: 100%;
+    border: 0;
+    display: block;
+    margin: 0 0 20px 0;
+  }
+
+  &__title {
+    font-family: 'Bebas_bold';
+    font-size: 1.5em;
+    letter-spacing: 3px;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+    min-height: 56px;
+  }
+
+  &__tagline {
+    font-family: 'Minion';
+    margin: 0;
+    color: $grey;
+    font-size: 1.25em;
+    font-weight: normal;
+    line-height: 1;
+  }
+
+  &__price {
+    font-family: 'Bebas_bold';
+    font-size: 1.25em;
+    letter-spacing: 3px;
+    margin: 10px 0;
+  }
+
+  &__description {
+    font-family: 'Minion';
+    color: $grey;
+    margin: 0 0 10px 0;
+    font-size: 1.15em;
+  }
+
+  &--inset {
+    margin: 0 20px 40px 20px;
+  }
+
+
+  .alpha-button {
+    padding: 10px 50px;
+    font-family: NovecentoWide;
+  }
+
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.shard {
+
+  &__1, &__2, &__3, &__4, &__5, &__6, &__7, &__8, &__9 {
+    @include phone-up {
+      opacity: 0.5;
+      z-index: 0;
+    }
+
+    @include tablet-up {
+      opacity: 1;
+    }
+  }
+
+  &__1 {
+    top: 30%;
+    left: 160%;
+  }
+
+  &__2 {
+    top: 50%;
+    left: 20%;
+  }
+
+  &__3 {
+    top: 80%;
+    left: 20%;
+  }
+
+  &__4 {
+    top: 20%;
+    right: 20%;
+  }
+
+  &__5 {
+    top: 20%;
+    right: 20%;
+  }
+
+  &__6 {
+    top: 50%;
+    right: 50%;
+  }
+
+  &__7 {
+    top: 10%;
+    left: -40%;
+  }
+
+  &__8 {
+    top: 70%;
+    left: 140%;
+  }
+
+  &__9 {
+    top: 50%;
+    left: -80%;
+  }
+
+}
+
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+
+.parallax__layer--back {
+  transform: translateZ(-1px);
+}
+
+.parallax__layer--fore {
+  transform: translateZ(-2px) scale(3);
+}
+
+.chocolate-cta {
+  background: #D8D8D8;
+  padding: 40px 0 40px 0;
+  text-align: center;
+
+  &__image {
+    max-height: 160px;
+    margin: -120px auto 0 auto;
+    display: block;
+
+    @include phone-up {
+      width: 100%;
+      max-height: 100px;
+      margin: -60px auto 0 auto;
+    }
+
+    @include tablet-up {
+      width: 100%;
+      max-height: 160px;
+      margin: -120px auto 0 auto;
+    }
+  }
+
+  h2 {
+    font-family: 'Bebas_bold';
+    font-size: 3em;
+    letter-spacing: 4px;
+    line-height: 1.44;
+    margin: 0;
+
+    @include phone-up {
+      font-size: 2em;
+      margin-top: 40px;
+    }
+
+    @include tablet-up {
+      font-size: 3em;
+    }
+  }
+
+  h4 {
+    font-family: 'Minion';
+    font-size: 1.75em;
+    color: $grey;
+    margin: 0;
+    line-height: 1.44;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: normal;
+
+    @include phone-up {
+      font-size: 1.25em;
+    }
+
+    @include tablet-up {
+      font-size: 1.75em;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    &:hover {
+      color: #866949;
+    }
+  }
+
+}

@@ -1,0 +1,288 @@
+
+@font-face {
+    font-family: 'signpaintermedium';
+    src: url($media + '/i/mothersday2016/signpainter-housescript-webfont.eot');
+    src: url($media + '/i/mothersday2016/signpainter-housescript-webfont.eot?#iefix') format('embedded-opentype'),
+         url($media + '/i/mothersday2016/signpainter-housescript-webfont.woff2') format('woff2'),
+         url($media + '/i/mothersday2016/signpainter-housescript-webfont.woff') format('woff'),
+         url($media + '/i/mothersday2016/signpainter-housescript-webfont.ttf') format('truetype'),
+         url($media + '/i/mothersday2016/signpainter-housescript-webfont.svg#signpaintermedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$mothersday-pink: #BB4B7F;
+
+.mothers-day {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: $charcoal;
+    padding: 0;
+    overflow-x: hidden;
+    padding-bottom: 15px;
+    background-color: #DCD8D8;
+    text-align: center;
+    font-size: 16px;
+
+    * {
+       -moz-box-sizing:    border-box;   /* Firefox 1, probably can drop this */
+       -webkit-box-sizing: border-box;   /* Safari 3-4, also probably droppable */
+        box-sizing:        border-box;   /* Everything else */
+    }
+
+    h1 {
+        margin-bottom: 0px;
+        line-height: 1;
+
+        @include phone-up {
+            margin-top: 15px;
+            font-size: 3em;
+        }
+
+        @include tablet-up {
+            font-size: 4em;
+            margin-top: 0.67em;
+        }
+
+    }
+
+    img {
+        display: block;
+    }
+
+    &__script {
+        font-family: 'signpaintermedium';
+    }
+
+    &__date {
+        margin: 0;
+        line-height: 1;
+        text-transform: uppercase;
+        margin-top: 10px;
+        letter-spacing: 1px;
+
+        @include phone-up {
+            font-size: 0.75em;
+        }
+
+        @include tablet-up {
+            font-size: 1em;
+        }
+    }
+
+    &__times {
+        font-size: 2em;
+        display: block;
+
+        @include phone-up {
+            margin: 15px 0;
+        }
+
+
+        @include desktop-xl-up {
+            margin: 25px 0;
+        }
+    }
+
+    &__frames {
+        margin: 0 auto;
+        width: 100%;
+
+        @include phone-up {
+            display: none;
+        }
+
+        @include tablet-up {
+            display: flex;
+        }
+
+        @include desktop-up {
+            max-width: 875px;
+        }
+
+        @include desktop-xl-up {
+            max-width: 1140px;
+        }
+
+    }
+
+    &__frames-mobile {
+        width: 100%;
+
+        @include phone-up {
+            display: inline-block;
+        }
+
+        @include tablet-up {
+            display: none;
+        }
+
+    
+    }
+
+    &__frame {
+        position: relative;
+
+        img {
+            margin: auto 0;
+        }
+    }
+
+    &__frame-mobile {
+        margin: 0 50px;
+        position: relative;
+    }
+
+    &__frame-overlay {
+        position: absolute;
+        z-index: 4;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        transition: all 0.2s ease-in-out;
+    }
+
+    &--frame-1 {
+        background: url($media + "/i/mothersday2016/small-frame.png") repeat-y bottom left; 
+      -webkit-background-size: 100%;
+      -moz-background-size: 100%;
+      -o-background-size: 100%;
+      background-size: 100%;
+      background-size:100%;
+
+    }
+
+    &--frame-2 {
+        background: url($media + "/i/mothersday2016/middle-frame.png") repeat-y bottom center; 
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+
+    &--frame-3 {
+        background: url($media + "/i/mothersday2016/small-frame.png") repeat-y bottom left; 
+      -webkit-background-size: 100%;
+      -moz-background-size: 100%;
+      -o-background-size: 100%;
+      background-size: 100%;
+      background-size:100%;
+    }
+
+    &--large-frame {
+        margin: 0;
+    }
+
+    .f-cont {
+        align-content: flex-start;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .f-col {
+        max-width: 30%;
+        position: relative;
+    }
+
+    .col-large {
+        flex: 1.2;
+        max-width: 35%
+    }
+
+    .col-margin-right {
+        margin-right: 2.5%;
+        margin-top: 30px;
+    }
+
+    .col-margin-left {
+        margin-left: 2.5%;
+        margin-top: 30px;
+    }
+
+    &__right {
+        font-family: 'NovecentoWide';
+        text-transform: uppercase;
+        margin: 25px 0 0 0;
+        line-height: 1;
+        font-size: 1.5em;
+    }
+
+    &__buy {
+        font-size: 2em;
+        display: block;
+        margin: 10px 0 25px 0;
+        line-height: 1;
+    }
+
+    &--pink {
+        color: $mothersday-pink;
+    }
+
+    &__products {
+        margin: 25px auto;
+        width: 100%;
+        max-width: 1140px;
+
+        color: $white;
+        text-align: left;
+    }
+
+    .alpha-button {
+        background-color: $mothersday-pink;
+        color: $white !important;
+
+        &:hover {
+           background-color: darken($mothersday-pink,10%); 
+        }
+    }
+
+    // overrides
+    .swiper-container {
+        width: 100%;
+    }
+
+    .swiper-slide {
+
+        img { 
+            width: 100%;
+        }
+
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        z-index: 4;
+        bottom: -30px;
+    }
+
+    .card-1 {
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .card-1:hover {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+
+    .card-2 {
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+
+    .card-3 {
+      box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    }
+
+    .card-4 {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+
+    .card-5 {
+      box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
+
+
+
+}
+

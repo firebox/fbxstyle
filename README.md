@@ -91,6 +91,12 @@ style="font-family:'sofia', Helvetica, Arial, sans-serif; font-weight: normal; c
 #### Alt & title tags
 Make sure your alt and title tags have been entered. Every card will have `FB_ALT` & `FB_TITLE` by default so do a quick search to see if you find any.
 
+#### Links
+You need to make sure your links are correct. You can search for `http://www.dot.com` to see if you have missed any links.
+
+#### ITC
+The right ITC needs to be used to know which newsletter brings in sales of the product. Check to see if you have left any ITC's by searching for `FB_ITC`.
+
 
 ## Testing
 #### Stage 1: In your browser

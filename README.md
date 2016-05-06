@@ -60,7 +60,6 @@ Below is what it looks like in the code:
 ```
 
 ## Style rules
-For the cards please follow the rules set.
 
 #### The 20px rule
 In a nutshell the 20px rule is a guide to how much padding everything should have on the email. You will see that each card has a 20px padding inside the card, a 20px padding between cards and text groups have 20px padding in between them. When you add padding, always add `padding-bottom`, padding works downwards.

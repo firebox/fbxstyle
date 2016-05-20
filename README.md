@@ -59,6 +59,25 @@ Below is what it looks like in the code:
 </table>
 ```
 
+#### Changing button colour
+To make sure that the whole button is clickable, I have changed the HTML of the button. If you want to change the colour of the button, all of the border colours need to be changed as well as `background-color`
+
+```
+<tr cellspacing="0" cellpadding="0">
+  <td align="center" style="width: 400px;">
+    <table border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>
+          <a href="http://www.dot.com?itc=FB_ITC" target="_blank" style="font-size: 16px; font-family:'sofia', Helvetica, Arial, sans-serif; text-decoration: none; border-radius: 3px; -webkit-border-radius: 3px; -moz-border-radius: 3px; font-weight: bold; text-transform: uppercase; background-color: #343434; border-top: 12px solid #343434; border-bottom: 12px solid #343434; border-right: 18px solid #343434; border-left: 18px solid #343434; display: inline-block; color: #ffffff;">
+            Button
+          </a>
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>
+```
+
 ## Style rules
 
 #### The 20px rule

@@ -105,6 +105,34 @@ Example code:
 style="font-family:'sofia', Helvetica, Arial, sans-serif; font-weight: normal; color: #888888; font-size: 16px; text-align: center;"
 ``
 
+## Issues
+#### My image slices are creating a gap
+<img src="http://media.firebox.com/i/github/slice-issue.jpg" width="300"><br>
+Each image is trying to fill the space with 100% width, which is causing the height of an image to sometimes be a fraction of a pixel.
+
+The solution is the manually set the height of the each image slice (3) in the row for desktop and mobile.
+
+1. First, add a class to each image: (Change IMG_CLASS to whatever you want)
+```
+<img src="IMG_SRC" width="100%" style="display: block; line-height: 50%; width: 100%;" class="IMG_CLASS" border="0">
+```
+
+2. Then add a height to the image in style and on the image
+```
+<img src="IMG_SRC" width="100%" height="100px" style="display: block; height: 100px; line-height: 50%; width: 100%;" class="IMG_CLASS" border="0">
+```
+
+3. And finally, add the media query. Make sure it is inside the curly brackets of`@media screen and (max-width: 525px) { }`
+```
+img[class="IMG_CLASS"]{
+    max-width: 100% !important;
+    width: 100% !important;
+    height: 100px !important;
+}
+```
+Change `height: 100px !important;` to the height of the image you want for mobile.
+Change `IMG_CLASS` to the class of the image you declared in step 1.
+
 ## Checks
 #### Alt & title tags
 Make sure your alt and title tags have been entered. Every card will have `FB_ALT` & `FB_TITLE` by default so do a quick search to see if you find any.

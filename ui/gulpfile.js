@@ -1,11 +1,6 @@
 var gulp = require('gulp');
 var gutil = require('gulp-util');
-var source = require('vinyl-source-stream');
-var browserify = require('browserify');
-var watchify = require('watchify');
-var reactify = require('reactify');
 var notifier = require('node-notifier');
-var server = require('gulp-server-livereload');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var watch = require('gulp-watch');
@@ -32,15 +27,19 @@ var notify = function(error) {
   notifier.notify({title: title, message: message});
 };
 
+gulp.task('serve', function(done) {
+  gulp.src('')
+});
+
 gulp.task('sass', function () {
-  gulp.src('./sass/**/*.scss')
+  gulp.src('./scss/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('style.css'))
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', ['serve', 'sass', 'watch']);
 
 gulp.task('watch', function () {
-  gulp.watch('./sass/**/*.scss', ['sass']);
+  gulp.watch('./scss/**/*.scss', ['sass']);
 });

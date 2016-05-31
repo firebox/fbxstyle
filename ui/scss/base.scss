@@ -1,28 +1,6 @@
 @import "variables";
-@import "fonts";
-@import "animations";
-@import "template-main";
+
 @import "global";
-@import "product-full";
 
-@import "pages/wrap-battle";
-@import "pages/producthunt";
-@import "pages/cword";
-@import "pages/valentines";
-@import "pages/mothersday";
-@import "pages/easter";
-@import "pages/april-fools-2016";
-@import "pages/kickstarter";
-
-@import "components/AddressForm";
-@import "components/AddressView";
-@import "components/BasketItem";
-@import "components/BasketPage";
-@import "components/Checkout";
-@import "components/CheckoutItem";
-@import "components/CheckoutPage";
-@import "components/PageView.scss";
-@import "components/ListView.scss";
-@import "components/AppHeader.scss";
-@import "components/MobileMenu.scss";
-@import "components/SearchResults.scss";
+// Components
+@import "components/grid";

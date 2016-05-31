@@ -29,21 +29,12 @@ $notice:            #79C0C0;
 $standard:          #F0ECEC; /* jake added this, does it exist? */
 $fade:              #EFEFEF;
 
-// for backgrounds
-$light-fade:        #F6F6F6;
-$medium-fade:       darken($fade, 5%); // #e2e2e2
-$dark-fade:         darken($fade, 10%); // #d5d5d5
 
-
-$error-background:  #FFEFEF;
-$error-highlight:   #FF0000;
-$success-background:  #79C0C0;
-$success-highlight:   #000000;
-
-$phone-width: 320px;
+$phone-width: 300px;
 $tablet-width: 768px;
-$desktop-width: 1024px;
-$desktop-xl-width: 1440px;
+$tablet-xl-width: 1024px;
+$desktop-width: 1280px;
+$desktop-xl-width: 1600px;
 
 @mixin phone-up {
   @media (min-width: #{$phone-width}) {
@@ -53,6 +44,12 @@ $desktop-xl-width: 1440px;
 
 @mixin tablet-up {
   @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin tablet-xl-up {
+  @media (min-width: #{$tablet-xl-width}) {
     @content;
   }
 }

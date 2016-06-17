@@ -18,6 +18,30 @@
 
 <body>
 
+  <div class="overlay active">
+    eedwef
+
+    <div class="modal loading">
+      <div class="modal-header">
+
+        <div class="modal-title modal-title__loading">
+          <div>
+            <span class="spinner spinner--large"></span>
+          </div>
+        </div>
+
+        <div class="modal-title modal-title__success">
+          <div>
+            <img src="img/tick.png" width="60" class="modal-title__icon">
+            Added to basket!
+          </div>
+        </div>
+
+        <img src="https://media.firebox.com/product/6958/column_grid_8/love-bites-balloons_1372.jpg">
+      </div>
+    </div>
+  </div>
+
   <div class="container" style="background: #eee;">
     <div class="row">
 
@@ -31,6 +55,18 @@
 
     </div>
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0="   crossorigin="anonymous"></script>
+
+  <script>
+
+  function changeClass() {
+    $(".modal").toggleClass("success");
+  }
+
+  setInterval(changeClass,3000);
+
+  </script>
 
 </body>
 </html>

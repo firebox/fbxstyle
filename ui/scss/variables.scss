@@ -1,4 +1,4 @@
-$media: '//media.firebox.com';
+$media: 'http://media.firebox.com';
 $header-font: NovecentoWide, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 /* See style guide: http://www.firebox.com/admin/style_guide */
@@ -64,4 +64,13 @@ $desktop-xl-width: 1600px;
   @media (min-width: #{$desktop-xl-width}) {
     @content;
   }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0) translate3d(0, 0, 0)
+    }
+    to {
+        transform: rotate(359deg) translate3d(0, 0, 0)
+    }
 }
